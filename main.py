@@ -6,53 +6,34 @@ import matplotlib.colors as mcolors
 import pandas as pd
 import data
 
-def sortedTable():
-    df = data.mainData()
-    subTotalRow = df[df["Trial"] == "Sub-Total"].iloc[0]
+print("\n")
+print("================================================================")
+print("                        Graph & Data Options")
+print("1. Main Data")
+print("2. Bar Graph (Greatest to Least)")
+print("3. Pie Chart")
+print("4. Exit")
+print("================================================================")
+print("\n")
 
-    colors = list(df.columns[1:])
-    valueMM = subTotalRow.values[1:]
-
-    sorted_df = pd.DataFrame({
-    "M&Ms": colors,
-    "Total": valueMM
-    })
-
-    sorted_df.sort_values(by = ["Total"], ascending = False,  inplace=True)
-    return sorted_df
-
-
-
-
-MMs = input("How would you like your M&Ms data to be displayed?")
+MMs = input("How would you like to display your data")
 
 match MMs:
     case '1':
-         df = data.mainData()
+         df = data.mainData(show_table=True)
          print(df)
          exit()
         
     case '2':
-        print(sortedTable())
+        sorted_df = data.sortedTable(showBarGraph=True)
+        print(sorted_df )
     case '3':
-        print("Test 3")
+        data.pieChart(showPieChart = True)
+        print("Pie Chart has been displayed successfully.")
     case '4':
-        print("Test 4")
+        exit()
     case _:
             print("Error test")
-
-
-
-
-plt.bar(
-       x = sortedTable["M&Ms"],
-       height= sortedTable["Total"]
-)
-
-
-
-
-
 
 
 
