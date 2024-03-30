@@ -34,13 +34,13 @@ Main menu
 Creates a visual of the M&M data frame.
 <img src="https://i.imgur.com/KiHjMYR.jpeg" width="600" class="jop-noMdConv">
 
-### **Menu Option #2: Excel File**
+### **Menu Option #2: Bar Graph**
 
 Creates a Bar Graph visual of the Subtotal row from greatest to least. 
 <img src="https://i.imgur.com/peZs5V2.jpeg" width="600" class="jop-noMdConv">  
 
-### **Menu Option #3: JSON File**
+### **Menu Option #3: Pie Chart**
 
-Prints quotes and author's name in a .json file.
+Creates a Pie Chart of the Subtotal row.
 <img src="https://i.imgur.com/KBk3SGd.jpeg" alt="Menu#3 Screenshot" width="600" class="jop-noMdConv">
 
